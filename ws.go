@@ -9,7 +9,7 @@ import (
 // Log is a very simple access log handler
 func Log(handler http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		fmt.Printf("%s %d %s %s", r.RemoteAddr, r.Response.StatusCode, r.Method, r.URL)
+		fmt.Printf("%s\t%s\t%s\n", r.RemoteAddr, r.Method, r.URL)
 		handler.ServeHTTP(w, r)
 	})
 }
