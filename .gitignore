@@ -1,0 +1,2 @@
+artifacts/ws-linux-amd64
+docker-build-push.sh
